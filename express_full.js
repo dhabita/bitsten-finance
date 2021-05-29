@@ -69,8 +69,7 @@ app.get('/farms',function(req,res){
    data['t']=new Date();
    data["title"] = "Home";
    data["url"] = "Home";
-   data['setting']['token'] = JSON.parse(JSON.stringify(setting.token));
-    
+   
     res.render('pages/home',{'data' : data});
  });
  
