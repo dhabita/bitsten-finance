@@ -78,6 +78,7 @@ app.get('/farms',function(req,res){
    var data = Array();
    data['setting']=Array();
    data['t']=new Date();
+   data['bst']=price.price.WBST;
    data["title"] = "Home";
    data["url"] = "Home";
    
