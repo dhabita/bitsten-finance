@@ -61,7 +61,18 @@ app.get('/farms',function(req,res){
     res.render('pages/farm',{'data' :   data });
  });
  
- 
+ app.get('/help',function(req,res){
+  var data = Array();
+    data['setting']=Array();
+    data['bst']=price.price.WBST;
+    data['t']=new Date();
+    data["title"] = "Help";
+    data["url"] = "Help";
+    
+   
+    
+   res.render('pages/help',{'data' :   data });
+});
  
  app.get('/',function(req,res){
    var data = Array();
