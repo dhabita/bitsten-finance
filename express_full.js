@@ -86,16 +86,7 @@ app.get('/farms',function(req,res){
  });
  
  
-
-
- app.get('/price',function(req,res){
-   res.setHeader('Content-Type', 'application/json');
-   //console.log(price)
-   res.send(JSON.stringify(price));
- });
-
  
-
 
 
 app.listen(port, () => console.info(`App listen on port ${port}`));
