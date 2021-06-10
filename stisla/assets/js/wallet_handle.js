@@ -150,6 +150,12 @@ var HANDLE ={
                 $('.r-your-lp-pid-'+pid)[x].innerHTML =  number_format(res,18);
                } 
         } 
+        if($('.yourusdlp-'+pid).length>0)
+        {   var x=0;
+            for(x=0;x<$('.yourusdlp-'+pid).length;x++) {
+                $('.yourusdlp-'+pid)[x].innerHTML =  number_format(res*10**18*$('#ratelp').text()*2,2);
+               } 
+        } 
 
 
         global(pid,res);

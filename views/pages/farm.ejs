@@ -15,6 +15,7 @@ function number_format(b,f= -1){
 }
 -%>
 <link rel="stylesheet" href="stisla/assets/css/customs/farm.css">
+<span id='ratelp' class='d-none'><%= data.rate -%></span>
 <style>
  
   
@@ -175,6 +176,16 @@ function number_format(b,f= -1){
             $ <span class=''><%=  number_format(data.rate * data.farm[a][5]*2)  %></span>
             </div>
             </div>
+
+            <div class="row font-weight-bold">
+            
+              <div class="col-5 text-left  " style="padding: 0px 10px">Your LP
+              </div>
+              <div class="col-7 text-right text-success " style=" padding: 0px 10px">
+              $ <span class='yourusdlp-<%=  a  %>'>0</span>
+              </div>
+              </div>
+
             <div class="row font-weight-bold">
               <div class="col-5 text-left  " style="padding: 0px 10px">Explorer
               </div>
