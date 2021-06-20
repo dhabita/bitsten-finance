@@ -122,14 +122,11 @@
             var digit = 18;
             const web3 = new Web3(ethereum);
           // check decimal before deposit
-            var abid = [{"inputs":[],"name":"decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function"}];
-            var  contract = new web3.eth.Contract(abid, setting.pid[pid].contract);
-            await  contract.methods.decimals().call().then(function(resp) {
-                
-            WALLET.Withdraw(pid,am*(10**resp))
+            
+            WALLET.Withdraw(pid,am*(10**18))
              
 
-            });
+             
             } 
           ,
               
@@ -233,12 +230,8 @@
                         "internalType": "uint256",
                         "name": "_pid",
                         "type": "uint256"
-                    }, {
-                        "internalType": "uint256",
-                        "name": "_amount",
-                        "type": "uint256"
                     }],
-                    "name": "withdraw",
+                    "name": "emergencyWithdraw",
                     "outputs": [],
                     "stateMutability": "nonpayable",
                     "type": "function"
@@ -252,7 +245,7 @@
                   var tx = {
                       from: fr,
                       to: co,
-                      data: contract.methods.withdraw(pid, amn).encodeABI() 
+                      data: contract.methods.emergencyWithdraw(pid).encodeABI() 
                       
                   };
                   web3.eth.sendTransaction(tx).then(res => {

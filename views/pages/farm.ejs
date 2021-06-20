@@ -23,8 +23,28 @@ function number_format(b,f= -1){
   .swapb-1{background: rgb(230, 191, 19);}
 </style>
  
-  <div class="row listing" style='max-width: 1000px ; margin:20px auto;'>
+  <div   style='max-width: 1000px ; margin:20px auto;'> 
+  
+    <div class="alert alert-danger" role="alert">
+      <b>Warning</b><br><br>
+      We found problems with farming contracts on this page.<br>
+      That's why we moved the farm to a new address & contract.<br><br>
+      
+      <a href='https://app.bitsten.finance'>https://app.bitsten.finance</a>
+      <br><br>
+      
+      Users need to withdraw ( Emergency Withdraw ) all deposits and move to a new farming page/contract.<br>
+      
+      <br>
+      We apologize for the inconvenience.<br>
+    </div>
 
+  </div>
+
+
+
+
+ <div class="row listing" style='max-width: 1000px ; margin:20px auto;'> 
 <% for( var a=0; a <  (data.farm.length) ;  a++ ){  -%>
 
  
@@ -120,13 +140,15 @@ function number_format(b,f= -1){
 
 
         <div  style='border-bottom:1px solid #ddd; display:none; margin:0px  ' class="row mt-2 pb-3 aproved-pid-<%=  a  %>"> 
-          <div class="col-6 text-center    "   >
-            <button class="btn btn-sm btn-success get-harvest-pid-<%=  a  %>">HARVEST</button>
+          <div class="col-12 text-center    "   >
+            <button class="btn btn-sm btn-success d-none get-harvest-pid-<%=  a  %>">HARVEST</button>
           </div>
-          <div class="col-6 text-center    "   >
+          <br>
+          <br>
+          <div class="col-12 text-center    "   >
            
-            <button data-toggle="modal" data-target="#modal-wd-pid-<%=  a  %>" data-backdrop="false" href="#!" class="btn btn-icon btn-info btn-sm wd-liq-pid-<%=  a  %>"><i class="fas fa-minus"></i></button>
-            <button data-toggle="modal" data-target="#modal-dp-pid-<%=  a  %>" data-backdrop="false" href="#!" class="btn btn-icon btn-info btn-sm dp-liq-pid-<%=  a  %> swap1-<%=  a  %>"><i class="fas fa-plus"></i></button>
+            <button data-toggle="modal" data-target="#modal-wd-pid-<%=  a  %>" data-backdrop="false" href="#!" class="btn btn-icon btn-info btn-sm wd-liq-pid-<%=  a  %>">Emergency Withdraw</button>
+            <button data-toggle="modal" data-target="#modal-dp-pid-<%=  a  %>" data-backdrop="false" href="#!" class="btn btn-icon d-none btn-info btn-sm dp-liq-pid-<%=  a  %> swap1-<%=  a  %>"><i class="fas fa-plus"></i></button>
  
               
           </div>
